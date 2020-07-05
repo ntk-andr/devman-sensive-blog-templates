@@ -1,6 +1,22 @@
 {% extends 'base.html' %}
+{% load staticfiles %} 
 {% block title %}Sensive Blog - Home{% endblock %}
 {% block content %}
+
+<!--================Hero Banner start =================-->
+    <section class="mb-30px">
+        <div class="container">
+            <div class="hero-banner">
+                <div class="hero-banner__content">
+                    <h3>Tours &amp; Travels</h3>
+                    <h1>Amazing Places on earth</h1>
+                    <h4>December 12, 2018</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--================Hero Banner end =================-->
+
 <!--================ Blog slider start =================-->
 <section>
   <div class="container">
@@ -33,6 +49,8 @@
             <div class="thumb">
               {% if fresh_post.image_url %}
                 <img class="img-fluid" src="{{ fresh_post.image_url }}" alt="{{ fresh_post.title }}">
+              {% else %}
+                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="{{ fresh_post.title }}">
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{ fresh_post.author }}</a></li>
