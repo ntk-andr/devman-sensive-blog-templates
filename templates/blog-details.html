@@ -10,6 +10,8 @@
         <div class="main_blog_details">
           {% if post.image_url %}
             <img class="img-fluid" src="{{post.image_url}}" alt="{{ post.title }}">
+          {% else %}
+            <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="{{ post.title }}">
           {% endif %}
           <h4>Cartridge Is Better Than Ever <br/> A Discount Toner</h4>
           <div class="user_details">
